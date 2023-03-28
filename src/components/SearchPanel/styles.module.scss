@@ -1,0 +1,106 @@
+@import "../../styles/colors.scss";
+
+.search__panel {
+    width: 100%;
+    height: max-content;
+    background: linear-gradient(
+        100deg,
+        $quaternary-color,
+        $secondary-color,
+        $tertiary-color
+    );
+    padding: 1.5rem;
+    display: grid;
+    justify-content: center;
+
+    .search__panel_content {
+        height: fit-content;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+
+    h1 {
+        color: $secondary-text-color;
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 0.03rem;
+    }
+
+
+
+    form {
+        display: grid;
+        gap: 0.5rem;
+        align-items: center;
+
+        .search__input_box {
+            display: flex;
+            align-items: center;
+
+            .search__input {
+                height: 1.8rem;
+                display: flex;
+                margin: auto;
+                width: 28rem;
+                border-radius: 1rem;
+                border: none;
+                padding: 1rem;
+                padding-right: 3rem;
+                font-size: 1.1rem;
+                outline: none;
+
+                &:focus {
+                    outline: 0.2rem solid $quinary-color;
+                }
+            }
+
+            div {
+                display: flex;
+                margin: auto;
+                align-items: center;
+            }
+
+            svg {
+                width: 25px;
+                height: 25px;
+                margin-left: -40px;
+                fill: rgb(84, 84, 84);
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            color: white;
+            letter-spacing: 0.02rem;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .categories, .sorting {
+            display: flex;
+            gap: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        select {
+            width: 6.5rem;
+            height: 1.8rem;
+            padding: 0.3rem;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            background: $quinary-color;
+            border: 0.03rem white solid;
+            color: white;
+        }
+
+    }
+}

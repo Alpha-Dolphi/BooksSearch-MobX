@@ -1,0 +1,48 @@
+@import "../../styles/colors.scss";
+
+.content {
+    display: grid;
+    align-items: center;
+
+    .total_items {
+        margin-top: 1.5rem;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .loader__button {
+        letter-spacing: -0.02rem;
+        width: 20rem;
+        height: 3rem;
+        font-weight: 700;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        color: rgb(84, 84, 84);
+        border-radius: 0.5rem;
+        background: $secondary-text-color;
+        border: $tertiary-color 0.25rem solid;
+        color: $tertiary-color;
+        transition: 0.1s;
+
+        &:hover {
+            background: $tertiary-color;
+            border: none;
+            color: $secondary-text-color;
+            scale: 1.01;
+        }
+    }
+
+    .loading_indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            margin-bottom: 1rem;
+            color: $tertiary-color;
+        }
+    }
+}

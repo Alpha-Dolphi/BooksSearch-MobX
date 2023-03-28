@@ -1,0 +1,13 @@
+.books__container {
+    position: relative;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+}

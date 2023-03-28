@@ -1,0 +1,74 @@
+@import "../../styles/colors.scss";
+
+.book__info_container {
+    width: 100vw;
+    min-height: 25rem;
+    gap: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 1rem;
+
+.image__box {
+    display: flex;
+    justify-content: center;
+    min-height: 20rem;
+    width: 30vw;
+
+    img {
+        width: 100%;
+        height:fit-content;
+        max-height: 30rem;
+        border-radius: 3%;
+        object-fit: contain;
+    }
+
+    svg {
+        width: 70%;
+        height: 100%;
+        height:fit-content;
+        box-shadow: 2px 2px 10px #bdbaba;
+        background: linear-gradient(
+            100deg,
+            $quaternary-color,
+            $secondary-color,
+            $tertiary-color
+        );
+        fill: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+    }
+
+    .info__box {
+        padding: 1rem;
+        letter-spacing: -0.01rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        h3 {
+            font-size: 1.5rem;
+            color: rgb(84, 84, 84);
+        }
+
+        h4 {
+            color: rgb(152, 152, 152);
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .book__info_container {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      .image__box {
+        width: 100%;
+      }
+    }
+}
