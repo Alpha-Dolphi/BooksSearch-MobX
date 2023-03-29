@@ -14,7 +14,7 @@ const BooksListPage: React.FC<SearchProps> = ({ value, setValue, category, setCa
 
   useEffect(() => {
     bookStore.reset();
-  }, [sortingOption]);
+  }, [sortingOption, value, category]);
 
   useEffect(() => {
     bookStore.fetchBooks({
@@ -22,21 +22,26 @@ const BooksListPage: React.FC<SearchProps> = ({ value, setValue, category, setCa
       searchQuery: value ? value : "{}",
       startIndex: startIndex,
       maxResults: maxResults,
+      category: category,
     } as searchQueryParameters);
-  }, [startIndex, sortingOption]);
+  }, [startIndex, sortingOption, value, category]);
 
   const books = bookStore.allBooks;
+  // console.log("HERE");
+  // console.log("unfilterdBooks ",  Object.keys(books).length, " = ", books);
 
-  const filterdBooks = Object.values(books)
-    .filter(book => {
-      const matchesSearchTerm = book.volumeInfo.title.includes(value);
-      const matchesCategory = category === "all" || book.volumeInfo.categories?.some(str => str.includes(category));
-      return matchesSearchTerm && matchesCategory;
-    })
-    .reduce((obj: Record<string, Book>, book) => {
-      obj[book.id] = book;
-      return obj;
-    }, {});
+  // const filterdBooks = Object.values(books)
+  //   .filter(book => {
+  //     const matchesSearchTerm = book.volumeInfo.title.includes(value);
+  //     const matchesCategory = category === "all" || book.volumeInfo.categories?.some(str => str.includes(category));
+  //     return matchesSearchTerm && matchesCategory;
+  //   })
+  //   .reduce((obj: Record<string, Book>, book) => {
+  //     obj[book.id] = book;
+  //     return obj;
+  //   }, {});
+
+    // console.log("filterdBooks ",  Object.keys(filterdBooks).length, " = ", filterdBooks);
 
   return (
     <div className={styles.content}>
@@ -46,7 +51,7 @@ const BooksListPage: React.FC<SearchProps> = ({ value, setValue, category, setCa
         <h2>Found {bookStore.totalOfItems ? bookStore.totalOfItems : 0} results</h2>
       </div>
 
-      <BooksList books={filterdBooks} />
+      <BooksList books={books} />
       <div className={styles.loading_indicator}>
         {bookStore.loadingStatus === 'inProgress' ? <h2>Loading Books..</h2> : ""}
       </div>

@@ -68,6 +68,7 @@ export default interface Book {
     searchQuery: string,
     startIndex: number,
     maxResults: number,
+    category: string,
   }
 
   export interface BookState {

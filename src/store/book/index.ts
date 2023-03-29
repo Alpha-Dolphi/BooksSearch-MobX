@@ -3,6 +3,16 @@ import axios from 'axios';
 import { LoadingStatuses } from '../../constants/loadingStatuses';
 import searchQueryParameters from './bookInterfaces';
 import Book from './bookInterfaces';
+import { enableLogging } from "mobx-logger";
+import { toJS } from 'mobx';
+
+// enableLogging({
+//   predicate: () => true, // log all changes
+//   action: true, // log actions
+//   reaction: false, // don't log reactions
+//   compute: false, // don't log computed values
+// });
+
 
 interface BookState {
   totalItems: string;
@@ -25,6 +35,13 @@ class BookStore {
   status = LoadingStatuses.Idle;
   entities: { [id: string]: Book } = {};
   ids: string[] = [];
+
+  // static mobxLoggerConfig: {
+  //   enabled: true,
+  //   // methods: {
+  //   //     myAction: true
+  //   // }
+  // };
 
   constructor() {
     makeAutoObservable(this);
@@ -51,11 +68,12 @@ class BookStore {
     searchQuery,
     startIndex,
     maxResults,
+    category,
   }: searchQueryParameters) {
     try {
       this.setStatus(LoadingStatuses.InProgress);
       const response = await axios.get(
-        `${(window as any).API_URL}?q=${searchQuery}&startIndex=${startIndex}&maxResults=${maxResults}&orderBy=${sortingOption}&key=${(window as any).API_KEY}`
+        `${(window as any).API_URL}?q=${searchQuery}+subject:${category}&startIndex=${startIndex}&maxResults=${maxResults}&orderBy=${sortingOption}&key=${(window as any).API_KEY}`
       );
       this.setBooks(response.data.items);
       this.setTotalItems(response.data.totalItems);
@@ -79,6 +97,10 @@ class BookStore {
   }
 
   setBooks(books: Book[]) {
+    // if (!books) {
+    //   return;
+    // }
+
     this.ids.push(...books.map((item: Book) => item.id));
     this.entities = {
       ...this.entities,
@@ -89,6 +111,7 @@ class BookStore {
       },
       {}
     )};
+    console.log("entities ",  Object.keys(this.entities).length, " = ", toJS(this.entities));
   }
 
   setBook(book: Book) {
