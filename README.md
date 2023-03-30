@@ -4,8 +4,6 @@ To run a project / Чтобы запустить проект
 
 ### `npm start`
 
-Live version of the project: https://incredible-rabanadas-dc4f47.netlify.app/
-
 Project Name: Book Search App
 
 Project Description: A web application that allows users to search for books by keyword, sorting option, and other parameters. The application uses the Google Books API to retrieve book data, and displays results in a paginated list with book cover images, title, author, and other details. Users can also click on a book to view more details and purchase options.
