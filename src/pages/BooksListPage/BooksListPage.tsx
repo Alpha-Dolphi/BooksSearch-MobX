@@ -27,21 +27,6 @@ const BooksListPage: React.FC<SearchProps> = ({ value, setValue, category, setCa
   }, [startIndex, sortingOption, value, category]);
 
   const books = bookStore.allBooks;
-  // console.log("HERE");
-  // console.log("unfilterdBooks ",  Object.keys(books).length, " = ", books);
-
-  // const filterdBooks = Object.values(books)
-  //   .filter(book => {
-  //     const matchesSearchTerm = book.volumeInfo.title.includes(value);
-  //     const matchesCategory = category === "all" || book.volumeInfo.categories?.some(str => str.includes(category));
-  //     return matchesSearchTerm && matchesCategory;
-  //   })
-  //   .reduce((obj: Record<string, Book>, book) => {
-  //     obj[book.id] = book;
-  //     return obj;
-  //   }, {});
-
-    // console.log("filterdBooks ",  Object.keys(filterdBooks).length, " = ", filterdBooks);
 
   return (
     <div className={styles.content}>

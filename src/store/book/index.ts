@@ -3,15 +3,7 @@ import axios from 'axios';
 import { LoadingStatuses } from '../../constants/loadingStatuses';
 import searchQueryParameters from './bookInterfaces';
 import Book from './bookInterfaces';
-import { enableLogging } from "mobx-logger";
 import { toJS } from 'mobx';
-
-// enableLogging({
-//   predicate: () => true, // log all changes
-//   action: true, // log actions
-//   reaction: false, // don't log reactions
-//   compute: false, // don't log computed values
-// });
 
 
 interface BookState {
@@ -35,13 +27,6 @@ class BookStore {
   status = LoadingStatuses.Idle;
   entities: { [id: string]: Book } = {};
   ids: string[] = [];
-
-  // static mobxLoggerConfig: {
-  //   enabled: true,
-  //   // methods: {
-  //   //     myAction: true
-  //   // }
-  // };
 
   constructor() {
     makeAutoObservable(this);
@@ -97,9 +82,6 @@ class BookStore {
   }
 
   setBooks(books: Book[]) {
-    // if (!books) {
-    //   return;
-    // }
 
     this.ids.push(...books.map((item: Book) => item.id));
     this.entities = {
