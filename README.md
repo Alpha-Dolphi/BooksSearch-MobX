@@ -7,13 +7,7 @@
 
 ---
 
-> A simple to use Books Search App created with React, TypeScript, Redux Toolkit and Axios powered by Google Books API
-
-# Project Name
-
-This is a testing task for a company Future.
-The requirements for this task can be found [here](https://docs.google.com/document/d/1fxxt1ZZUhrGsiUuizgVevYWPOs_bPVvpXUFT3BSFQAw/edit).
-
+> A simple to use Books Search App created with React, TypeScript, Redux Toolkit and Axios powered by Google Books API. This is a testing task for a company Future. The requirements for this task can be found [here](https://docs.google.com/document/d/1fxxt1ZZUhrGsiUuizgVevYWPOs_bPVvpXUFT3BSFQAw/edit).
 
 ## Main Features
 
