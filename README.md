@@ -5,6 +5,7 @@
 ![React version](https://img.shields.io/badge/React-v18.2.0-orange)
 ![MobX version](https://img.shields.io/badge/MobX-v6.9.0-purple)
 
+---
 
 > A simple to use Books Search App created with React, TypeScript, Redux Toolkit and Axios powered by Google Books API
 
