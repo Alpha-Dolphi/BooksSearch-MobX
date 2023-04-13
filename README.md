@@ -13,6 +13,12 @@
 
 ### ✨ [Demo](https://candid-mousse-31b9c0.netlify.app/)
 
+## Screenshots
+
+Here's a preview of my project in action:
+
+![Screenshot of my project](https://live.staticflickr.com/65535/52814419915_32fc539a1f_n.jpg)
+
 ## Install
 
 ```sh
