@@ -3,11 +3,15 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> A web application that allows users to search for books by keyword, sorting option, and other parameters. The application uses the Google Books API to retrieve book data, and displays results in a paginated list with book cover images, title, author, and other details. Users can also click on a book to view more details and purchase options.
+> A simple to use Books Search App created with React, TypeScript, Redux Toolkit and Axios powered by Google Books API
 
-### 🏠 [Homepage](Main Features)
+## Main Features
 
-### ✨ [Demo](    Search: You can search for books by keyword, sorting option, and other parameters.)
+- **Search**: You can search for books by keyword, sorting option, and other parameters.
+- **Results**: A paginated list of search results will be displayed with book cover images, title, author, and other details.
+- **Book Details**: You can click on a book to view more details, such as the book description, reviews, and related books.
+
+### ✨ [Demo](https://candid-mousse-31b9c0.netlify.app/)
 
 ## Install
 
@@ -37,6 +41,3 @@ npm run test
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
