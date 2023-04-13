@@ -1,25 +1,42 @@
-To run a project / Чтобы запустить проект
+<h1 align="center">Welcome to Books Search App 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-### `npm install react-scripts@5.0.1 --legacy-peer-deps`
+> A web application that allows users to search for books by keyword, sorting option, and other parameters. The application uses the Google Books API to retrieve book data, and displays results in a paginated list with book cover images, title, author, and other details. Users can also click on a book to view more details and purchase options.
 
-### `npm start`
+### 🏠 [Homepage](Main Features)
 
-Project Name: Book Search App
+### ✨ [Demo](    Search: You can search for books by keyword, sorting option, and other parameters.)
 
-Project Description: A web application that allows users to search for books by keyword, sorting option, and other parameters. The application uses the Google Books API to retrieve book data, and displays results in a paginated list with book cover images, title, author, and other details. Users can also click on a book to view more details and purchase options.
+## Install
 
-Main Features:
+```sh
+npm install
+```
 
-Search for books by keyword, sorting option, and other parameters
-Display paginated list of search results with book cover images, title, author, and other details
-Click on a book to view more details
-Technologies Used: React, TypeScript, Redux Toolkit, Axios, Google Books API
+## Usage
 
-Target Audience: Anyone who wants to search for books online, including avid readers, book enthusiasts, and students/researchers who need to find books on specific topics.
+```sh
+npm run start
+```
 
-Goals of the Project:
+## Run tests
 
-Provide a user-friendly and efficient way for users to search for books online
-Retrieve accurate and relevant search results from the Google Books API
-Display book details and purchase options in an easy-to-read and informative manner
-Allow users to customize search parameters and sorting options to find the books they need more quickly and easily.
+```sh
+npm run test
+```
+
+## Author
+
+👤 **Bogdan**
+
+* Website: https://effulgent-brigadeiros-8b54e7.netlify.app/
+* Github: [@Alpha-Dolphi](https://github.com/Alpha-Dolphi)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
