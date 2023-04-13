@@ -17,7 +17,7 @@
 
 ## Preview
 
-### ✨ [Demo](https://candid-mousse-31b9c0.netlify.app/)
+### ✨ [Live Demo](https://candid-mousse-31b9c0.netlify.app/)
 
 Here's a preview of my project in action:
 
